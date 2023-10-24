@@ -15,13 +15,13 @@ class Clinic:
         for patient in self.patients:
             if patient.get_ssn() == ssn:
                 return patient
-        raise NoSuchPatient("No patient found with SSN: {}".format(ssn))
+        raise NoSuchPatient("SSN bilan bemor topilmadi: {}".format(ssn))
 
     def get_doctor(self, id_number):
         for doctor in self.doctors:
             if doctor.get_id_number() == id_number:
                 return doctor
-        raise NoSuchDoctor("No doctor found with ID: {}".format(id_number))
+        raise NoSuchDoctor("Hech qanday shifokor topilmadi: {}".format(id_number))
 
 class NoSuchPatient(Exception):
     pass
